@@ -1,7 +1,0 @@
-"Inheritance is a mechanism in programming where a class can acquire properties and behaviors
- from another class, known as the parent class or base class. The derived class or child class
-  extends the functionality of the parent class, inheriting its attributes, methods,
-   and relationships. This enables code reuse, promotes modularity, and facilitates the
-   creation of more specialized classes based on existing ones."
-
-Through inheritance, a child class can access and use the members (variables, methods, etc.)
