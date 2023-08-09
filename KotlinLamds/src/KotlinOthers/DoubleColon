@@ -1,0 +1,50 @@
+In Kotlin, the double colon :: is used for several purposes, depending on the context.
+ Here are the main uses of the double colon in Kotlin:
+
+1)Method Reference: When used before a function or method name,
+-it creates a reference to that function without invoking it.
+ -This is particularly useful when you want to pass a function as an argument or assign
+ it to a variable without actually calling the function. For example:
+
+Example:
+
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+ val operation: (Int, Int) -> Int = ::add
+
+Here, ::add creates a reference to the add function, and operation becomes a variable that holds this reference.
+
+
+2)Constructor Reference: You can also use :: to refer to a constructor of a class.
+-This is useful when you want to create instances of a class without actually invoking the constructor.
+For example:
+
+class Person(val name: String, val age: Int)
+
+val personConstructor: (String, Int) -> Person = ::Person
+
+In this example, ::Person refers to the constructor of the Person class.
+
+3)Reference to a Property or Member: You can use :: to refer to properties or members of a class.
+-This is often used when you want to access properties or members in reflection-related tasks.
+ For example:
+
+class MyClass {
+    val myProperty: Int = 42
+}
+val propertyReference: KProperty<Int> = MyClass::myProperty
+
+In this case, MyClass::myProperty refers to the myProperty property of the MyClass class.
+
+4)Member Function Reference: You can use :: to refer to a member function of a class as well.
+ -This is used in cases similar to method references but with class instances. For example:
+
+fun Int.isEven(): Boolean = this % 2 == 0
+
+val checkEven: (Int) -> Boolean = Int::isEven
+Here, Int::isEven refers to the isEven member function of the Int class.
+
+In summary, :: is a versatile operator in Kotlin that can be used to refer to functions,
+ constructors, properties, and member functions, depending on the context.
+  It's a powerful tool that aids in functional programming, reflection, and other advanced programming techniques.

@@ -1,0 +1,48 @@
+n Kotlin, higher-order functions are functions that can take one or more functions as parameters
+ and/or return a function. This concept is a fundamental part of functional programming and provides
+  a powerful way to abstract and manipulate behavior in your code. Higher-order functions allow you
+  to treat functions as first-class citizens, just like any other values, such as integers or strings.
+
+Here's a breakdown of the components involved in higher-order functions:
+
+1)Function Types: In Kotlin, functions have types just like any other values. For example,
+the type of a function that takes an integer and returns an integer can be represented
+ as (Int) -> Int. Similarly, a function that takes no parameters and returns a string has a type of () -> String.
+
+2)Passing Functions as Parameters: Higher-order functions can accept other functions
+as parameters. This enables you to provide custom behavior to the higher-order function.
+
+
+Here's a simple example:
+example1:
+fun applyOperation(x: Int, operation: (Int) -> Int): Int {
+    return operation(x)
+}
+
+fun main() {
+    val result = applyOperation(5) { num -> num * 2 }
+    println(result) // Output: 10
+}
+
+In this example, the applyOperation function takes an integer x and a function operation,
+and it applies the provided function to the integer.
+
+Example2:
+
+Returning Functions: Higher-order functions can also return functions as their results.
+ This allows you to generate functions on the fly based on certain conditions or inputs. Here's an example:
+
+fun createMultiplier(factor: Int): (Int) -> Int {
+    return { num -> num * factor }
+}
+
+fun main() {
+    val timesTwo = createMultiplier(2)
+    val result = timesTwo(7) // Applying the returned function
+    println(result) // Output: 14
+}
+
+In this case, the createMultiplier function returns a new function
+ that multiplies its argument by the given factor.
+
+

@@ -1,0 +1,48 @@
+
+// Pass the function as argument into another function
+// syntax for passing the higher order function :
+
+/*
+fun higherOrderFunction(arg1: Type1, arg2: Type2, operation: (Type1, Type2) -> ReturnType) {
+    // Inside the function, you can call the 'operation' function
+    // with the provided arguments to perform some action.
+}
+
+fun main() {
+    // Calling the higher-order function and providing a function as an argument
+    higherOrderFunction(value1, value2) { arg1, arg2 ->
+        // Define the behavior of the passed function here
+        // This block will be executed within the higherOrderFunction
+        // with 'arg1' and 'arg2' as the provided arguments
+        // Return a value of 'ReturnType'
+    }
+}
+
+
+ */
+
+/*
+Here's what each part of the syntax means:
+
+-higherOrderFunction: This is the name of the higher-order function that you're defining.
+
+-arg1, arg2: These are the regular arguments of the higher-order function.
+ Replace Type1 and Type2 with the appropriate data types of these arguments.
+
+-operation: This is the parameter that accepts a function as an argument.
+Replace Type1, Type2, and ReturnType with the appropriate data types.
+ The (Type1, Type2) -> ReturnType represents a function type that takes Type1 and Type2 arguments
+ and returns a value of ReturnType.
+
+Inside the higher-order function, you can call the operation function,
+ passing in the required arguments, to perform some action.
+
+In the main function, you call the higherOrderFunction, providing values for arg1 and arg2.
+ After the values, you use a lambda expression to define the behavior
+  of the function you're passing as an argument.
+   This is where you put the code that uses arg1 and arg2 to produce a result of ReturnType.
+
+Remember that the key idea is to pass a function as an argument to another function,
+ which enables you to customize the behavior of the higher-order function.
+
+ */

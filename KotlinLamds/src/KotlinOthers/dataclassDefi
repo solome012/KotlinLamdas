@@ -1,0 +1,27 @@
+What is data Class?
+=>In simple terms, a data class in Kotlin is a special type of class designed to hold data.
+ It's a way to define a class where the primary purpose is to store properties and their values.
+ Kotlin provides some additional functionality for data classes, such as automatically generating
+  useful methods like toString(), equals(), hashCode(), and more.
+
+ => Think of a data class as a convenient way to create objects that represent some specific data
+  or entity in your program. It saves you from writing a lot of repetitive code for properties,
+   constructors, and common methods.
+
+   Syntax:
+
+   For example, let's say you have a class that represents a simple user profile with a name and an age:
+
+  =>  data class UserProfile(val name: String, val age: Int)
+
+
+  Running the code:
+  fun main() {
+      val user1 = UserProfile("Alice", 25)
+      val user2 = UserProfile("Bob", 30)
+
+      println(user1) // Output: UserProfile(name=Alice, age=25)
+      println(user1 == user2) // Output: false
+  }
+
+

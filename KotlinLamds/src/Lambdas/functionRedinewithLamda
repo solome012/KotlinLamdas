@@ -1,0 +1,12 @@
+Redefine the function with a lambda expression
+Lambda expressions provide a concise syntax to define a function without the fun keyword.
+You can store a lambda expression directly in a variable without a function reference on another function.
+
+Before the assignment operator (=), you add the val or var keyword followed by the name
+of the variable, which is what you use when you call the function. After the assignment
+operator (=) is the lambda expression, which consists of a pair of curly braces that
+form the function body. The syntax is illustrated in this syntax:
+
+val variable name = {
+// function body
+}

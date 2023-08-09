@@ -1,0 +1,33 @@
+Lambdas in programming, often referred to as "anonymous functions" or "lambda expressions,"
+ are a way to define short, inline blocks of code that can be treated as values.
+  In simple terms, a lambda is like a mini-function that you can use directly within your
+  code without giving it a separate name.
+
+  Here's a simple breakdown of lambdas:
+
+  1)Inline Code Blocks: Lambdas allow you to define small pieces of code that
+  can be used wherever a function is expected.
+
+  2)No Need for a Named Function: Unlike regular functions, you don't need to give a lambda
+   a specific name. You can define it on the spot where it's needed.
+
+ 3) Arguments and Return Values: Lambdas can take arguments and return values, just like regular functions.
+
+  4)Concise Syntax: Lambdas are often written using a concise syntax, making them ideal for simple operations.
+
+
+  For example, in Kotlin, a lambda to add two numbers could look like this:
+
+
+  val add = { a: Int, b: Int -> a + b }
+  In this example:
+
+  val add defines a variable named add.
+  a: Int, b: Int lists the parameters that the lambda accepts.
+  -> separates the parameter list from the code block.
+  a + b is the code block that performs the addition.
+  You can then use this add lambda just like you would use a regular function:
+
+
+  val result = add(3, 5) // result will be 8
+
